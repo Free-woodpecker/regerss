@@ -23,10 +23,13 @@ x1=0.0
 x2=0
 x3=0
 x4=0
+x5=0
+x6 = 0
 
 y=0
 xy = 0
 x2y = 0
+x3y = 0
 
 with open('213.csv', 'r') as f:
     reader = csv.reader(f)
@@ -39,11 +42,14 @@ with open('213.csv', 'r') as f:
         x2 = x2 + float(row[1])**2
         x3 = x3 + float(row[1])**3
         x4 = x4 + float(row[1])**4
+        x5 = x5 + float(row[1])**5
+        x6 = x6 + float(row[1])**6
         
         y = y + float(row[0])
         xy = xy + float(row[0]) * float(row[1])
         x2y = x2y + float(row[0]) * float(row[1])**2
-
+        x3y = x3y + float(row[0]) * float(row[1])**3
+        
         num += 1
 
 x = np.asarray(x, dtype =  float)
@@ -64,20 +70,21 @@ X = np.insert(X,0,[1],1)
 # 无正则化
 W2 = np.linalg.inv((X.T.dot(X))).dot(X.T).dot(a)
 
-W =  np.zeros(3)
-A = np.array([[num,x1,x2],[x1,x2,x3],[x2,x3,x4]])
-b = np.array([[y],[xy],[x2y]])
+# 三阶拟合  微积分方法CESHI
+W =  np.zeros(4)
+A = np.array([[num,x1,x2,x3],[x1,x2,x3,x4],[x2,x3,x4,x5],[x3,x4,x5,x6]])
+b = np.array([[y],[xy],[x2y],[x3y]])
 
-A2 = np.linalg.inv(A)
+# A2 = np.linalg.inv(A)
 
-# W = np.linalg.inv(A).dot(b)
+W = np.linalg.inv(A).dot(b)
 # -0.101493999362,-0.350430995226,0.024311399087
-W[0] = 1.047689138137
-W[1] = -0.002908761835
-W[2] = 0.000045950889
+# W[0] = 1.047689138137
+# W[1] = -0.002908761835
+# W[2] = 0.000045950889
 
 y_estimate=X.dot(W2)
-y_estimate2=X.dot(W)
+y_estimate2= W[0] + W[1]*x +W[2]*x**2 + W[3]*x**3
 
 
 mp.plot(x,y_estimate,'r',lw=1.0)
