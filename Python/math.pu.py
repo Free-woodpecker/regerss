@@ -7,5 +7,5 @@ Created on Mon Nov  2 17:23:07 2020
 
 import math
 
-print(math.atan(1/12)*57.3)
+print(math.atan(1/13)*57.3)
 
