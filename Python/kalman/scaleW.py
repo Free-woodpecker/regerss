@@ -51,7 +51,7 @@ with open('213.csv', 'r') as f:
         x3y = x3y + float(row[0]) * float(row[1])**3
         
         num += 1
-
+        
 x = np.asarray(x, dtype =  float)
 
 # mp.plot(x, a, lw = 1.0)
