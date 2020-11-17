@@ -10,7 +10,7 @@ import cv2
 import sys
 
 # 根据摄像头设置IP及rtsp端口
-url = 'rtsp://admin:hk123456@192.168.1.52:554/h264/ch42/sub/av_stream'
+url = 'rtsp://admin:Ilife2016@192.168.1.7:554/h264/ch34/main/av_stream'
 #  33  34  35  36  37  38  39  40x 41  42  43  44  45  46  47  48  49x
 
 print('Start!!!')
