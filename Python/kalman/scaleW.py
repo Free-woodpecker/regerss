@@ -89,7 +89,7 @@ y_estimate2= W[0] + W[1]*x +W[2]*x**2 + W[3]*x**3
 
 
 mp.plot(x,y_estimate,'r',lw=1.0)
-mp.plot(x,y_estimate2,'g',lw=2.0)
+# mp.plot(x,y_estimate2,'g',lw=2.0)
 
 mp.show()
 
