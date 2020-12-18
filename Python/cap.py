@@ -12,14 +12,14 @@ import sys
 # url = 'rtsp://admin:Ilife2016@192.168.1.68:554/h264/ch33/main/av_stream'
 # 33  34  35  36  37  38  39  40  41
 
-# url = 'rtsp://admin:Ilife2016@192.168.1.7:554/h264/ch48/main/av_stream'
+url = 'rtsp://admin:Ilife2016@192.168.1.7:554/h264/ch42/main/av_stream'
 # url = 'rtsp://admin:hk123456@192.168.1.52:554/h264/ch47/main/av_stream'
 # #  33  34  35  36  37  38  39  40x 41  42  43  44  45  46  47  48  49x
 
 # url = 'rtsp://admin:hk123456@192.168.1.192:554/h264/ch43/main/av_stream'
 # 36  37  38  39  40  41  42  43  44  45  46  47x 48x 49x
 
-url = 'rtsp://admin:Ilife2016@192.168.1.68:554/Streaming/tracks/901?transportmode=unicast&starttime=20201207T135010Z&endtime=20201207T151010Z'
+# url = 'rtsp://admin:Ilife2016@192.168.1.68:554/Streaming/tracks/901?transportmode=unicast&starttime=20201207T135010Z&endtime=20201207T151010Z'
 
 print('Start!!!')
 
